@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS orders (
     id SERIAL, -- PK
     created_at TIMESTAMP,
     delivery_date TIMESTAMP,
-    status VARCHAR(50), -- создан, отправлен, доставлен
+    status VARCHAR(50), -- создан, отправлен, доставлен, отменен
     delivery_cost DECIMAL(10, 2),
     sender_user_id INT, -- FK к user
     receiver_user_id INT, -- FK к user

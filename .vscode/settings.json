@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "db_lab01",
+            "group": "bmstu_db",
+            "database": "bmstu_db",
+            "username": "postgres"
+        }
+    ]
+}
