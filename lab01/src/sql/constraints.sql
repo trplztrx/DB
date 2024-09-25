@@ -9,6 +9,7 @@ ALTER TABLE addresses
 
 ALTER TABLE orders
     ALTER COLUMN created_at SET NOT NULL,
+    ALTER COLUMN updated_at SET NOT NULL,
     ALTER COLUMN status SET NOT NULL,
     ALTER COLUMN delivery_cost SET NOT NULL,
     ADD CONSTRAINT chk_order_status CHECK (status IN ('создан', 'отправлен', 'доставлен', 'отменен')),
@@ -20,6 +21,7 @@ ALTER TABLE orders
     
 ALTER TABLE orders
     ALTER COLUMN created_at SET DEFAULT CURRENT_TIMESTAMP;
+    ALTER COLUMN updated_at SET DEFAULT CURRENT_TIMESTAMP;
 
 ALTER TABLE users
     ALTER COLUMN user_type SET NOT NULL,
@@ -33,8 +35,7 @@ ALTER TABLE users
 ALTER TABLE addresses
     ALTER COLUMN region SET NOT NULL,
     ALTER COLUMN city SET NOT NULL,
-    ALTER COLUMN street SET NOT NULL,
-    ALTER COLUMN house SET NOT NULL,
+    ALTER COLUMN address_street SET NOT NULL,
     ALTER COLUMN address_type SET NOT NULL,
     ADD CONSTRAINT chk_address_type CHECK (address_type IN ('отправитель', 'получатель'));
 

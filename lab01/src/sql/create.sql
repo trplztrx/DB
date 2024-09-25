@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS orders (
     id SERIAL, -- PK
     created_at TIMESTAMP,
-    delivery_date TIMESTAMP,
+    updated_at TIMESTAMP,
     status VARCHAR(50), -- создан, отправлен, доставлен, отменен
     delivery_cost DECIMAL(10, 2),
     sender_user_id INT, -- FK к user
@@ -22,9 +22,7 @@ CREATE TABLE IF NOT EXISTS addresses (
     id SERIAL, -- PK
     region VARCHAR(100),
     city VARCHAR(100),
-    street VARCHAR(100),
-    house VARCHAR(20),
-    apartments VARCHAR(20),
+    address_street VARCHAR(255),
     address_type VARCHAR(50) -- отправитель / получатель
 );
 
