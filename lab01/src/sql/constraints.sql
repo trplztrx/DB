@@ -28,7 +28,7 @@ ALTER TABLE users
     ALTER COLUMN name SET NOT NULL,
     ALTER COLUMN phone SET NOT NULL,
     ALTER COLUMN email SET NOT NULL,
-    ADD CONSTRAINT chk_user_type CHECK (user_type IN ('физик', 'юрик')),
+    ADD CONSTRAINT chk_user_type CHECK (user_type IN ('физ', 'юр')),
     ADD CONSTRAINT unique_phone_users UNIQUE (phone),
     ADD CONSTRAINT unique_email UNIQUE (email);
 
