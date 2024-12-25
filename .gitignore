@@ -6,3 +6,7 @@
 *.json
 
 /docs/
+
+vendor/
+
+nifi*/

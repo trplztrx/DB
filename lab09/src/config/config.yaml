@@ -1,0 +1,10 @@
+postgres:
+  host: ${DB_HOST}
+  port: 5432
+  user: ${DB_USER}
+  password: ${DB_PASS}
+  db: ${DB_NAME}
+
+redis:
+  host: ${REDIS_HOST}
+  port: 6379
